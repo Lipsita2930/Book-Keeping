@@ -1,0 +1,20 @@
+
+<h3 class="text-center" style="margin-bottom: 5px;">ExpenseType Report</h3>
+<p-chart type ="bar" [data] ="multiAxisData" [options]="multiAxisOptions"  width="40vw" height="50vh"></p-chart>
+<div class="row text-center" style="font: size 25px;">
+    <div class="col">
+            <p>Electricity: {{labelData[0]}}</p>
+            <p>Rent: {{labelData[1]}}</p>
+            <p>Salaries: {{labelData[2]}}</p>
+            </div>
+            <div class="col">
+            <p>Fees: {{labelData[3]}}</p>
+            <p>Charity: {{labelData[4]}}</p>
+             <p>Purchases:{{labelData[5]}}</p>
+            </div>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+</div>
+         
+

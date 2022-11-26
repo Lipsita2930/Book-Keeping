@@ -1,0 +1,18 @@
+<h3 class="text-center" style="margin-bottom: 5px;">PaymentType Report</h3>
+<p-chart type ="pie" [data] = basicData width="40vw" height="50vh"></p-chart>
+<div class="row text-center" style="font: size 25px;">
+    <div class="col">
+        <p>Credit Amount: {{creditAmount}}</p>
+        <p>Debit Amount: {{debitAmount}}</p>
+        <p>Cash Amount: {{cashAmount}}</p>
+        </div>
+        <div class="col">
+        <p>UPI Amount: {{upiAmount}}</p>
+        <p>Gpay Amount: {{gpayAmount}}</p>
+        <p>Total Amount:{{totalAmount}}</p>
+        </div>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+</div>
+         

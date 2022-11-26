@@ -1,0 +1,38 @@
+
+<div mat-dialog-content>
+    <form [formGroup]="updateRegistrationForm" >
+        <h3 style="font-weight:bold;">Update Details</h3>
+        
+        <div class="input-group">
+        <input class="input--style-3" type="text" placeholder="Name" name="name" formControlName="name">
+        <small *ngIf="regFunction['name'].invalid && regFunction['name'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid name</small>
+        </div>
+        
+        <div class="input-group">
+        <div class="rs-select2 js-select-simple select--no-search">
+        </div>
+        </div>
+        <div class="input-group">
+        <input class="input--style-3" type="email" placeholder="Email" name="email" formControlName="email" >
+        <small *ngIf="regFunction['email'].invalid && regFunction['email'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid Email Address</small>
+        </div>
+        <div class="input-group">
+        <input class="input--style-3" type="number" placeholder="phone" name="phone" formControlName="phone" >
+        <small *ngIf="regFunction['phone'].invalid && regFunction['phone'].touched" class="text-danger" style="margin-right:auto">Please Enter the phone Number</small>
+        </div>
+
+
+        <div class="input-group">
+            <input class="input--style-3" type="text" placeholder="Occupation" name="occupation" formControlName="occupation" >
+            <small *ngIf="regFunction['occupation'].invalid && regFunction['occupation'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid Details</small>
+        </div>
+            
+        <div mat-dialog-action [align]="'end'">
+            <button  [disabled]="updateRegistrationForm.invalid" mat-raised-button color="primary"style="margin-right: 8px;"
+            (click)="updateListener()">Update</button>
+            <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+           
+        </div>
+  </form>
+  </div>
+

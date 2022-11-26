@@ -1,0 +1,17 @@
+<h3 class="text-center" style="margin-bottom: 5px;">AssetType Report</h3>
+<p-chart type="doughnut" [data]="basicData"width="40vw" height="50vh" ></p-chart>
+<div class="row text-center" style="font: size 25px;">
+    <div class="col">
+        <p>Expense: {{labelData[0]}}</p>
+        <p>Long Term Asset: {{labelData[1]}}</p>
+        </div>
+        <div class="col">
+        <p>Current Asset: {{labelData[2]}}</p>
+        <p>Liability: {{labelData[3]}}</p>
+        </div>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+</div>
+         
+

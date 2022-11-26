@@ -1,0 +1,76 @@
+<h3 class="text-center">Invoice </h3>
+<div class="container">
+        <div class="row">
+                      <div class="col-lg-6">
+                                   <ul class="list-unstyled mb0">
+                                        <li><strong>Invoice</strong> #{{invoiceid}}</li>
+                                        <li><strong>Due Date:</strong>{{editData.dueDate}}</li>
+                                        <li><strong>Status:</strong> <span class="label label-danger">{{editData.status}}</span></li>
+                                    </ul>
+                         </div>
+                
+                        <div class="col-lg-6">
+                            <div class="invoice-from">
+                                <ul class="list-unstyled text-right">
+                                    <li style="margin-left: 5.5vw;"><strong>Name:</strong>{{currentUser.name}}</li>
+                                    <li style="margin-left: 5.5vw;"><strong>Email:</strong>{{currentUser.email}}</li>
+                                    <li style="margin-left: 3.5vw;"><strong>Phone:</strong>{{currentUser.phone}}</li>
+                                </ul>
+                            </div>
+                        </div>
+        </div>
+        <div class="invoice-items">
+                                <div class="table-responsive" style="overflow: hidden; outline: none;" tabindex="0">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th class="per70 text-center">Description</th>
+                                                <th class="per5 text-center">Payment Type</th>
+                                                <th class="per25 text-center">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>({{editData.notes}})</td>
+                                                <td class="text-center">{{editData.paymentType}}</td>
+                                                <td class="text-center">${{editData.amount}}/-</td>
+                                        
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td class="text-center">SGST</td>
+                                                <td class="text-center">${{editData.sgst}}/-</td>
+                                        
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td class="text-center">IGST</td>
+                                                <td class="text-center">${{editData.igst}}/-</td>
+                                        
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td class="text-center">CGST</td>
+                                                <td class="text-center">${{editData.cgst}}/-</td>
+                                        
+                                            </tr>
+                                           
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th colspan="2" class="text-right">Sub Total:</th>
+                                                <th class="text-center">${{editData.amount+this.sgst+this.cgst+this.igst}}/- </th>
+                                            </tr>
+                                            
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        
+</div>
+
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close style="margin-right: 20px;" >Close</button>
+</div>
+                        
+                        

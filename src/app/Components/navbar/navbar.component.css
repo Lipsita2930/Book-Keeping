@@ -1,0 +1,15 @@
+.navbar
+{
+    background: #002b5c;
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color: aliceblue;
+    font-size: 16px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+    text-decoration: underline;
+}
+

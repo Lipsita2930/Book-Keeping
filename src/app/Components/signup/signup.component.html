@@ -1,0 +1,70 @@
+
+<div class="container" [ngClass]="{'right-panel-active':right==1}" id="container">
+        <div class="form-container sign-up-container">
+            <form [formGroup]="registrationForm" (ngSubmit)="registerUser()" >
+                <h3 style="font-weight:bold;">Registration Info</h3>
+                <small class="text-danger" style="margin-right:auto">{{msgreg}}</small>
+                <div class="input-group">
+                <input class="input--style-3" type="text" placeholder="Name" name="name" formControlName="name" [(ngModel)]="user.name">
+                <!-- <small *ngIf="regFunction['name'].invalid && regFunction['name'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid name</small> -->
+                </div>
+                
+                <div class="input-group">
+                <div class="rs-select2 js-select-simple select--no-search">
+                </div>
+                </div>
+                <div class="input-group">
+                <input (input)="Email($event)" class="input--style-3" type="email" placeholder="Email" name="email" formControlName="email" [(ngModel)]="user.email">
+                <small *ngIf="flag==1" class="text-danger" style="margin-right:auto">{{msg}}</small>
+                <small *ngIf="regFunction['email'].invalid && regFunction['email'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid Email Address</small>
+                </div>
+                <div class="input-group">
+                <input class="input--style-3" type="number" placeholder="phone" name="phone" formControlName="phone" [(ngModel)]="user.phone">
+                <small *ngIf="regFunction['phone'].invalid && regFunction['phone'].touched" class="text-danger" style="margin-right:auto">Please Enter the phone Number</small>
+                </div>
+
+
+                <div class="input-group">
+                    <input class="input--style-3" type="text" placeholder="Occupation" name="occupation" formControlName="occupation" [(ngModel)]="user.occupation">
+                    <small *ngIf="regFunction['occupation'].invalid && regFunction['occupation'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid Details</small>
+                </div>
+                    
+
+
+                <div class="input-group">
+                    <input class="input--style-3" type="password" placeholder="Password" name="password" formControlName="password" [(ngModel)]="user.password">
+                    <small *ngIf="regFunction['password'].invalid && regFunction['password'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid password</small>
+                </div>
+
+                <button [disabled]="registrationForm.invalid">Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+
+            <form [formGroup]="loginForm" (ngSubmit)="loginUser()" >
+                <h1>Sign in</h1>
+               <small class="text-danger" style="margin-right:auto">{{msglog}}</small>
+                <input type="email" name="email" placeholder="Email" formControlName="email" [(ngModel)]="user.email" />
+                <small *ngIf="loginFunction['email'].invalid && loginFunction['email'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid Email Address</small>
+                <input type="password" name="password" placeholder="Password" formControlName="password" [(ngModel)]="user.password"/>
+                <small *ngIf="loginFunction['password'].invalid && loginFunction['password'].touched" class="text-danger" style="margin-right:auto">Please Enter a valid password</small>
+                
+                <button [disabled]="loginForm.invalid">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn" (click)="signInListener()" >Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp" (click)="signUpListener()">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   

@@ -1,0 +1,38 @@
+*{
+  margin:0px;
+  padding: 0px;
+  font-family: 'ubuntu',sans-serif;
+}
+.card-img-top{
+  width: 20vw;
+  height: 45vh;
+}
+.title{
+text-align: center;
+padding: 25px 0px;
+}
+.title p{
+  font-size: 18px;
+}
+.card-body{
+  box-shadow: 0 0 20px 7px rgba(0,0, 0,0.1);
+}
+.card{
+  margin: 20px 30px;
+  box-shadow: 0 0 4px 4px gainsboro; 
+}
+.btn{
+  width: 100px;
+  padding: 4px;
+  margin: 5px;
+  text-align: center;
+}
+.card-title{
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.8rem;
+  letter-spacing: 1.3px;
+}
+.btn :hover{
+  background-color: firebrick;
+}

@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-dialog-container{
+    margin-top: 80px;
+}
+#dialogTrasparent{
+	background: transparent;
+}
+#chartDialog{
+    margin-top: -4px;
+}
+.chartback{
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/003/042/242/small/abstract-blue-grunge-texture-background-free-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#updateExpense{
+    height:90vh;
+    width:80vw;
+    margin-top:0vw;
+}
+

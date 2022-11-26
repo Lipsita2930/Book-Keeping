@@ -1,0 +1,13 @@
+
+<h3 class="text-center" style="margin-bottom: 5px;">FinanceType Report</h3>
+<p-chart type ="polarArea" [data] ="data" [options]="chartOptions"  width="30vw" height="50vh"></p-chart>
+<div class="row text-center" style="font: size 25px;">
+    <div class="col">
+            <p>Balance Sheet: {{labelData[0]}}</p>
+            <p>Income Statement: {{labelData[1]}}</p>
+            <p>Invoie: {{labelData[2]}}</p>
+            </div>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+</div>

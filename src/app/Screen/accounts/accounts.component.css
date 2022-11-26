@@ -1,0 +1,55 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+   
+    .gradient-custom-2 {
+    height:100%;
+    background: #a1c4fd;
+    background: -webkit-linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1));
+    background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1))
+    }
+    
+    .bg-indigo {
+    background-color: #4835d4;
+    }
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-indigo {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-indigo {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    mat-form-field{
+        width: 100%;
+    }
+    
+    table {
+        width: 100%;
+      }
+      
+      .mat-form-field {
+        font-size: 14px;
+        width: 100%;
+      }
+      
+      td, th {
+        width: 25%;
+      }
+      .btn{
+    
+        margin-right: 1vw;
+        float: right;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-top: 1vw;
+        background-color: rgb(8, 116, 8);
+        color: white;
+    
+    }

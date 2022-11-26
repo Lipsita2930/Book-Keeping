@@ -1,0 +1,134 @@
+
+<h3 style="text-align:center">Update Details</h3>
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;"> 
+          <div class="card-body p-0">
+            <form [formGroup]="updateExpense" (ngSubmit)="updateExpenseSubmitHandler()">
+              <div class="row g-0">
+
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <h1>Expense Details</h1>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Expense Type</mat-label>
+                      <mat-select formControlName="expenseType">
+                        <mat-option>--</mat-option>
+                        <mat-option *ngFor="let option of expenseType" [value]="option">{{option}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" floatLabel="always">
+                      <mat-label>Amount</mat-label>
+                      <input matInput type="number" placeholder="0" formControlName="amount">
+                      <span matPrefix>₹&nbsp;</span>
+                      <span matSuffix>.00</span>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Due Date</mat-label>
+                      <input matInput [matDatepicker]="picker" formControlName="dueDate">
+                      <mat-datepicker-toggle matSuffix [for]="picker">
+                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                      </mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                      <mat-label>Asset Type</mat-label>
+                      <mat-select formControlName="assetType">
+                        <mat-option>--</mat-option>
+                        <mat-option *ngFor="let option of assetType" [value]="option">{{option}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                      <mat-label>Transaction Type</mat-label>
+                      <mat-select formControlName="transactionType">
+                        <mat-option>--</mat-option>
+                        <mat-option *ngFor="let option of transaction" [value]="option">{{option}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                      <mat-label>Payment Type</mat-label>
+                      <mat-select formControlName="paymentType">
+                        <mat-option>--</mat-option>
+                        <mat-option *ngFor="let option of paymentType" [value]="option">{{option}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+                
+
+                    <mat-form-field appearance="outline">
+                      <mat-label>Financial Statement Type</mat-label>
+                      <mat-select formControlName="financialType" >
+                        <mat-option>--</mat-option>
+                        <mat-option *ngFor="let option of finStatement" [value]="option">{{option}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+                  </div>
+                </div>
+                <div class="col-lg-6 bg-indigo text-white">
+                  <div class="p-5">
+     
+
+                    <mat-form-field appearance="outline">
+                      <mat-label style="color: white;">Status</mat-label>
+                      <mat-select formControlName="status" >
+                        <mat-option>--</mat-option>
+                        <mat-option *ngFor="let option of status" [value]="option" >{{option}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label style="color: white;">Enter Notes</mat-label>
+                      <textarea matInput placeholder="Ex. Describe the Expense" formControlName="notes"
+                       ></textarea>
+                    </mat-form-field>
+
+
+                    <h1>Tax Details</h1>
+                    <mat-form-field appearance="outline" floatLabel="always">
+                      <mat-label style="color: white;">SGST</mat-label>
+                      <input matInput type="number" placeholder="0" formControlName="sgst"
+                       >
+                      <span matPrefix>₹&nbsp;</span>
+                      <span matSuffix>.00</span>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" floatLabel="always">
+                      <mat-label style="color: white;">CGST</mat-label>
+                      <input matInput type="number" placeholder="0" formControlName="cgst"
+                       >
+                      <span matPrefix>₹&nbsp;</span>
+                      <span matSuffix>.00</span>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" floatLabel="always">
+                      <mat-label style="color: white;">IGST</mat-label>
+                      <input matInput type="number" placeholder="0" formControlName="igst"
+                     >
+                      <span matPrefix>₹&nbsp;</span>
+                      <span matSuffix>.00</span>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label style="color: white;">Supplier Name</mat-label>
+                      <input matInput placeholder="Ex. Gupta Electricals" formControlName="supplierName"
+                       >
+                    </mat-form-field>
+
+                    <div mat-dialog-action [align]="'center'">
+                      <button mat-raised-button color="primary" style=" margin-right: 8px;">Update</button>
+                        <button mat-raised-button color="warn"mat-dialog-close >Close</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+          </div>
+         
+       
+          

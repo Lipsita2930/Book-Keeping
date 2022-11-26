@@ -1,0 +1,21 @@
+.d-flex{
+    height:35vw;
+  
+}
+.user{
+    width: 80px;;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+@media (min-width: 1400px) {
+    .d-flex{
+        height:80vh;
+        margin: 20px 30px;
+        padding-top:4vw;
+    }
+    .z-depth-3{
+        margin-top: 40px;
+    }
+    }
+   
+

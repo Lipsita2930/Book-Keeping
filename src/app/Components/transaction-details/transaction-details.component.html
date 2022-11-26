@@ -1,0 +1,40 @@
+<h3 style="text-align: center;">Transaction Details</h3>
+<div class="imgdiv">
+  <img src="./assets/Images/tranDetails.png" class="img"/>
+</div>
+<table class=" table table-hover">
+    <thead>
+        <th scope="col">Date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Credit</th>
+        <th scope="col">Debit</th>
+    
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{editData.dueDate}}</th>
+        <td>Paid From: {{editData.paymentType}}</td>
+        <!-- <td>${{editData.amount+editData.sgst+editData.cgst+editData.igst}}/-</td> -->
+        <td>${{editData.amount+this.sgst+this.cgst+this.igst}}/-</td> 
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>Payment Type: {{editData.transactionType}}</td>
+        <td></td>
+        <!-- <td>${{editData.amount+editData.sgst+editData.cgst+editData.igst}}/-</td> -->
+         <td>${{editData.amount+this.sgst+this.cgst+this.igst}}/-</td> 
+
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>{{editData.notes}}</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+</div>
+  
